@@ -41,14 +41,15 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: 0;
+    width: 4px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: transparent !important;
+    background:  linear-gradient(0deg, #203682 0%, #0f4261 100%) !important;
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: transparent;
+    background: transparent; /* opacity: 0; should do the thing either */
+    box-shadow: 0px 0px 0px 100000vh #0b171e;
     border-radius: 10px;
 }

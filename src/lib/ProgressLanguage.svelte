@@ -16,13 +16,13 @@
     }
 </script>
 
-<div class="grid grid-rows-2 justify-items-center mb-[-4rem]">
-    <div class="h-36">
-        <ProgressRadial stroke={40} {meter} track="stroke-[#4B4B4B]/80" strokeLinecap='butt' value={value}></ProgressRadial>
+<div class="grid grid-rows-2 justify-items-center 1220:mb-[-4rem]">
+    <div class="1220:h-36 h-28 mb-[-3rem] 1220:mb-0">
+        <ProgressRadial width="1220:w-36 w-16" stroke={40} {meter} track="stroke-[#4B4B4B]/80" strokeLinecap='butt' value={value}></ProgressRadial>
         <img {src} alt="python" class="{className}">
     </div>
     <div>
-        <p class="h4 font-semibold h-12 flex justify-center items-center">{strUcFirst(objet)}</p>
-        <p class="h4 font-semibold h-4 flex justify-center items-center">{value}%</p>
+        <p class="1220:h4 text-sm font-semibold h-12 flex justify-center items-center">{strUcFirst(objet)}</p>
+        <p class="1220:h4 font-semibold h-4 flex justify-center items-center">{value}%</p>
     </div>
 </div>
