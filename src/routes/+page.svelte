@@ -6,6 +6,7 @@
     import Tag from '$lib/Tag.svelte';
     import ProgressLanguage from '$lib/ProgressLanguage.svelte';
     import ProjectBox from '$lib/ProjectBox.svelte';
+    import { base } from '$app/paths';
 
     let tabSet: number = 0;
     let tabSet2: number = 2;
@@ -29,7 +30,7 @@
                     </Typing>
                 </h1>
                 <div class="w-42 h-42 rounded-full bg-gradient-to-br from-blue-500 to-cyan-300 flex flex-row items-center justify-center myshadow">
-                    <Avatar src="/img/avatar2.png" width="w-40" rounded="rounded-full"/>
+                    <Avatar src="{base}/img/avatar2.png" width="w-40" rounded="rounded-full"/>
                 </div>
             </div>
         </section>
@@ -47,7 +48,7 @@
                         {#if tabSet === 0}
                             <div class="w-full px-6 pt-16 flex flex-col gap-8 items-center h4">
                                 <div class="flex flex-row gap-8 items-center">
-                                    <Avatar src="/img/avatar.png" width="w-32" rounded="rounded-2xl"/>
+                                    <Avatar src="{base}/img/avatar.png" width="w-32" rounded="rounded-2xl"/>
                                     <div class="flex flex-col gap-4">
                                         <p>My name is <span class="font-bold bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone">Hugo MERY</span>, I live in Tours, in France and I am 19 years old.</p>
                                         <p>My favorite hobby is tennis, I do it 3 hours a week since 2013.</p>
@@ -58,7 +59,7 @@
                         {:else if tabSet === 1}
                             <div class="w-full sm:px-6 pt-16 grid grid-cols-2 gap-32 justify-items-center h4">
                                 <div class="w-full flex flex-row gap-10 justify-start items-center card">
-                                    <img src="/img/polytech.png" alt="polytech" class="w-32 h-32 hidden xl:flex"/>
+                                    <img src="{base}/img/polytech.png" alt="polytech" class="w-32 h-32 hidden xl:flex"/>
                                     <div class="flex flex-col gap-2">
                                         <div>09/2022 - In progress</div>
                                         <div><span class="font-bold bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone">Polytech Engineering School</span></div>
@@ -67,7 +68,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full flex flex-row gap-10 justify-end items-center row-span-2">
-                                    <img src="/img/vaucanson.jpg" alt="vaucanson" class="w-32 h-32 rounded-full hidden xl:flex"/>
+                                    <img src="{base}/img/vaucanson.jpg" alt="vaucanson" class="w-32 h-32 rounded-full hidden xl:flex"/>
                                     <div class="flex flex-col gap-2">
                                         <div>09/2019 – 07/2022</div>
                                         <div><span class="font-bold bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone">Jacques de Vaucanson high school</span></div>
@@ -82,7 +83,7 @@
                                     </div>
                                 </div>
                                 <div class="w-full flex flex-row gap-10 justify-start items-center card">
-                                    <img src="/img/JeanRoux.png" alt="polytech" class="w-32 h-32 rounded-lg hidden xl:flex"/>
+                                    <img src="{base}/img/JeanRoux.png" alt="polytech" class="w-32 h-32 rounded-lg hidden xl:flex"/>
                                     <div class="flex flex-col gap-2">
                                         <div>09/2015 – 07/2019</div>
                                         <div><span class="font-bold bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone">Jean Roux Middle School</span></div>
@@ -94,7 +95,7 @@
                         {:else if tabSet === 2}
                             <div class="flex flex-col gap-12 w-full h4 items-center pt-16">
                                 <div class="flex flex-row gap-12">
-                                    <img src="/img/themis.png" alt="prisma" class="bg-white border-4 border-white w-46 h-16 rounded-lg"/>
+                                    <img src="{base}/img/themis.png" alt="prisma" class="bg-white border-4 border-white w-46 h-16 rounded-lg"/>
                                     <div class="flex flex-col gap-2 w-full justify-center">
                                         <span>02/2019 - 02/2019</span>
                                         <span><span class="font-bold bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone">Themis Technologies</span> | Ambillou, France, 37 | Internship observation</span>
@@ -124,29 +125,29 @@
                     <svelte:fragment slot="panel">
                         {#if tabSet2 === 0}
                         <div class="grid grid-cols-5 sm:gap-12 gap-x-6 gap-y-12 sm:px-6 pt-12">
-                            <ProgressLanguage value={95} src={"/img/languages/python.png"} meter="stroke-[#3b78a8]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]" />
-                            <ProgressLanguage value={80} src={"/img/languages/typescript.png"} meter="stroke-[#2d79c7]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem] rounded-lg"/>
-                            <ProgressLanguage value={85} src={"/img/languages/javascript.png"} meter="stroke-[#f0dc4e]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem] rounded-lg"/>
-                            <ProgressLanguage value={95} src={"/img/languages/html.png"} meter="stroke-[#e85823]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
-                            <ProgressLanguage value={95} src={"/img/languages/css.png"} meter="stroke-[#214ce5]/80" class="1220:mt-[-6.7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
-                            <ProgressLanguage value={65} src={"/img/languages/php.png"} meter="stroke-[#6181b6]/80" class="1220:mt-[-6.7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
-                            <ProgressLanguage value={85} src={"/img/languages/sql.png"} meter="stroke-[#7dba01]/80" class="1220:mt-[-7rem] 1220:ml-[2.5rem] 1220:w-16 w-6 mt-[-3rem] ml-[1.25rem]"/>
-                            <ProgressLanguage value={50} src={"/img/languages/java.png"} meter="stroke-[#e76f00]/80" class="1220:mt-[-7.5rem] 1220:ml-[2.5rem] 1220:w-16 w-6 mt-[-3rem] ml-[1.25rem]"/>
-                            <ProgressLanguage value={45} src={"/img/languages/c.png"} meter="stroke-[#004482]/80" class="1220:mt-[-7.3rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={95} src="{base}/img/languages/python.png" meter="stroke-[#3b78a8]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]" />
+                            <ProgressLanguage value={80} src="{base}/img/languages/typescript.png" meter="stroke-[#2d79c7]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem] rounded-lg"/>
+                            <ProgressLanguage value={85} src="{base}/img/languages/javascript.png" meter="stroke-[#f0dc4e]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem] rounded-lg"/>
+                            <ProgressLanguage value={95} src="{base}/img/languages/html.png" meter="stroke-[#e85823]/80" class="1220:mt-[-7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={95} src="{base}/img/languages/css.png" meter="stroke-[#214ce5]/80" class="1220:mt-[-6.7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={65} src="{base}/img/languages/php.png" meter="stroke-[#6181b6]/80" class="1220:mt-[-6.7rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={85} src="{base}/img/languages/sql.png" meter="stroke-[#7dba01]/80" class="1220:mt-[-7rem] 1220:ml-[2.5rem] 1220:w-16 w-6 mt-[-3rem] ml-[1.25rem]"/>
+                            <ProgressLanguage value={50} src="{base}/img/languages/java.png" meter="stroke-[#e76f00]/80" class="1220:mt-[-7.5rem] 1220:ml-[2.5rem] 1220:w-16 w-6 mt-[-3rem] ml-[1.25rem]"/>
+                            <ProgressLanguage value={45} src="{base}/img/languages/c.png" meter="stroke-[#004482]/80" class="1220:mt-[-7.3rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
                         </div>
                         {:else if tabSet2 === 1}
                         <div class="grid grid-cols-5 sm:gap-12 gap-x-6 gap-y-12 sm:px-6 pt-12">
-                            <ProgressLanguage value={95} src={"/img/frameworks/svelte.png"} meter="stroke-[#DE4516]/80" class="1220:mt-[-7.5rem] 1220:ml-[2rem] 1220:w-20 w-6 mt-[-2.85rem] ml-[1.25rem]"/>
-                            <ProgressLanguage value={90} src={"/img/frameworks/tailwind.png"} meter="stroke-[#35bef8]/80" class="1220:mt-[-6.5rem] 1220:ml-[1.5rem] 1220:w-24 w-8 mt-[-2.5rem] ml-[1.05rem]"/>
-                            <ProgressLanguage value={70} src={"/img/frameworks/laravel.png"} meter="stroke-[#ff291a]/80" class="1220:mt-[-7rem] 1220:ml-[2.2rem] 1220:w-20 w-8 mt-[-2.85rem] ml-[1.05rem]"/>
-                            <ProgressLanguage value={60} src={"/img/frameworks/pocketbase.png"} meter="stroke-[#000000]/80" class="1220:mt-[-7rem] 1220:ml-[2.2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1.05rem]"/>
-                            <ProgressLanguage value={60} src={"/img/frameworks/prisma.png"} meter="stroke-[#123a50]/80" class="1220:mt-[-7.5rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3.25rem] ml-[1.05rem]"/>
+                            <ProgressLanguage value={95} src="{base}/img/frameworks/svelte.png" meter="stroke-[#DE4516]/80" class="1220:mt-[-7.5rem] 1220:ml-[2rem] 1220:w-20 w-6 mt-[-2.85rem] ml-[1.25rem]"/>
+                            <ProgressLanguage value={90} src="{base}/img/frameworks/tailwind.png" meter="stroke-[#35bef8]/80" class="1220:mt-[-6.5rem] 1220:ml-[1.5rem] 1220:w-24 w-8 mt-[-2.5rem] ml-[1.05rem]"/>
+                            <ProgressLanguage value={70} src="{base}/img/frameworks/laravel.png" meter="stroke-[#ff291a]/80" class="1220:mt-[-7rem] 1220:ml-[2.2rem] 1220:w-20 w-8 mt-[-2.85rem] ml-[1.05rem]"/>
+                            <ProgressLanguage value={60} src="{base}/img/frameworks/pocketbase.png" meter="stroke-[#000000]/80" class="1220:mt-[-7rem] 1220:ml-[2.2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1.05rem]"/>
+                            <ProgressLanguage value={60} src="{base}/img/frameworks/prisma.png" meter="stroke-[#123a50]/80" class="1220:mt-[-7.5rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3.25rem] ml-[1.05rem]"/>
                         </div>
                         {:else if tabSet2 === 2}
                         <div class="grid grid-cols-3 sm:gap-12 gap-x-6 gap-y-12 sm:px-6 pt-12">
-                            <ProgressLanguage value={65} src={"/img/tools/node.png"} meter="stroke-[#8bc500]/80" class="1220:mt-[-7.25rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
-                            <ProgressLanguage value={75} src={"/img/tools/git.png"} meter="stroke-[#f05030]/80" class="1220:mt-[-7.25rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
-                            <ProgressLanguage value={60} src={"/img/tools/jetbrains.png"} meter="stroke-[#000000]/80" class="1220:mt-[-7.25rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={65} src="{base}/img/tools/node.png" meter="stroke-[#8bc500]/80" class="1220:mt-[-7.25rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={75} src="{base}/img/tools/git.png" meter="stroke-[#f05030]/80" class="1220:mt-[-7.25rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
+                            <ProgressLanguage value={60} src="{base}/img/tools/jetbrains.png" meter="stroke-[#000000]/80" class="1220:mt-[-7.25rem] 1220:ml-[2rem] 1220:w-20 w-8 mt-[-3rem] ml-[1rem]"/>
                         </div>
                         {/if}
                     </svelte:fragment>
@@ -161,19 +162,19 @@
                     <div class="p-1 bg-[#0b171e] rounded-lg">
                         <div class="flex flex-col gap-28 items-center md:h-175 h-150 py-18 sm:px-18 overflow-x-hidden overflow-y-auto rounded-lg bg-[#0b171e]">
                             <div class="flex 1780:flex-row flex-col 1780:gap-20 gap-32 items-center justify-center p-0">
-                                <ProjectBox src="/img/projects/cosmos.png" color="#395bff" gradient="57deg, #1b42ff, #45e0ff" title="Cosmos" status={false}>Comos is a design system, very elaborate, fully customizable and adapts to all available frameworks!</ProjectBox>  
-                                <ProjectBox src="/img/projects/hippocampe.png" color="#1386C9" gradient="57deg, #1386C9, #13C9BE" title="Hippocampe" status={false}>Hippocampe is a brand new Discord bot. It provides a full leveling system, including role rewards and a custom economy!</ProjectBox>
-                                <ProjectBox src="/img/projects/scheV2.jpg" color="#ded8d8" gradient="57deg, #ded8d8, #918d8d" title="ScheV2" status={false}>ScheV2 is the improved version of a discord robot made in typescript which manages the schedule of a college class every day!</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/cosmos.png" color="#395bff" gradient="57deg, #1b42ff, #45e0ff" title="Cosmos" status={false}>Comos is a design system, very elaborate, fully customizable and adapts to all available frameworks!</ProjectBox>  
+                                <ProjectBox src="{base}/img/projects/hippocampe.png" color="#1386C9" gradient="57deg, #1386C9, #13C9BE" title="Hippocampe" status={false}>Hippocampe is a brand new Discord bot. It provides a full leveling system, including role rewards and a custom economy!</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/scheV2.jpg" color="#ded8d8" gradient="57deg, #ded8d8, #918d8d" title="ScheV2" status={false}>ScheV2 is the improved version of a discord robot made in typescript which manages the schedule of a college class every day!</ProjectBox>
                             </div>
                             <div class="flex 1780:flex-row flex-col 1780:gap-20 gap-32 items-center justify-center p-0">
-                                <ProjectBox src="/img/projects/baryum.png" color="#ffd34e" gradient="57deg, #ffd34e, #b29336" title="Baryum" status={false}>Baryum is an AI from Deep Image Prior made in python with the following functions: super-resolution, restoration, inpainting and denoising!</ProjectBox>
-                                <ProjectBox src="/img/projects/dramaquick.png" href="https://github.com/Dramaquick/DramaQuick" color="#93f891" gradient="57deg, #34ffad, #9cf690" title="DramaQuick" status={true}>DramaQuick is an accelerated quiz site; temporary questionnaires, quiz sessions... All of this was created with one idea: ephemerality!</ProjectBox>
-                                <ProjectBox src="/img/projects/portfolio.png" href="https://github.com/RogLag/PortFolio.git" color="#4daae5" title="Portfolio" status={true}>This is the site you are on, it was developed with sveltekit, typescript and tailwindcss.</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/baryum.png" color="#ffd34e" gradient="57deg, #ffd34e, #b29336" title="Baryum" status={false}>Baryum is an AI from Deep Image Prior made in python with the following functions: super-resolution, restoration, inpainting and denoising!</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/dramaquick.png" href="https://github.com/Dramaquick/DramaQuick" color="#93f891" gradient="57deg, #34ffad, #9cf690" title="DramaQuick" status={true}>DramaQuick is an accelerated quiz site; temporary questionnaires, quiz sessions... All of this was created with one idea: ephemerality!</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/portfolio.png" href="https://github.com/RogLag/PortFolio.git" color="#4daae5" title="Portfolio" status={true}>This is the site you are on, it was developed with sveltekit, typescript and tailwindcss.</ProjectBox>
                             </div>
                             <div class="flex 1780:flex-row flex-col 1780:gap-20 gap-32 items-center justify-center p-0">
-                                <ProjectBox src="/img/projects/niobium.png" href="https://github.com/RogLag/Niobium" color="#dc3522" gradient="57deg, #dc3522, #8f2216" title="Niobium" status={true}>Niobium is a very primary AI allowing you to know if the word emitted is a yes or a no.</ProjectBox>
-                                <ProjectBox src="/img/projects/scheV1.png" href="https://github.com/RogLag/Sche" color="#ffffff" gradient="57deg, #ffffff, #b2b2b2" title="ScheV1" status={true}>ScheV1 is the first version of a discord robot made in python which manages the schedule of a college class every day!</ProjectBox>
-                                <ProjectBox src="/img/projects/robot.png" href="https://github.com/RogLag/Robot" color="#ff7f27" gradient="57deg, #ff7f27, #b2581b" title="PolyRobot" status={true}>The Poly Robot is the micropython operating code of a robot allowing movement and taking information from sensors!</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/niobium.png" href="https://github.com/RogLag/Niobium" color="#dc3522" gradient="57deg, #dc3522, #8f2216" title="Niobium" status={true}>Niobium is a very primary AI allowing you to know if the word emitted is a yes or a no.</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/scheV1.png" href="https://github.com/RogLag/Sche" color="#ffffff" gradient="57deg, #ffffff, #b2b2b2" title="ScheV1" status={true}>ScheV1 is the first version of a discord robot made in python which manages the schedule of a college class every day!</ProjectBox>
+                                <ProjectBox src="{base}/img/projects/robot.png" href="https://github.com/RogLag/Robot" color="#ff7f27" gradient="57deg, #ff7f27, #b2581b" title="PolyRobot" status={true}>The Poly Robot is the micropython operating code of a robot allowing movement and taking information from sensors!</ProjectBox>
                             </div>
                         </div>
                     </div>

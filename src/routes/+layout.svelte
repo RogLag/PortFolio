@@ -1,6 +1,7 @@
 <script lang="ts">
     import "../app.css";
     import { scrollTop, scrollRef, scrollTo } from 'svelte-scrolling';
+    import { base } from '$app/paths';
 
     const data: any = [
         {
@@ -41,17 +42,17 @@
     <div class="fixed 940:flex 940:flex-row 940:justify-end 940:items-center pb-4 pt-10 pr-4 z-50 top-0 right-0 hidden ">
             <div class="flex flex-col xl:flex-row justify-center items-center gap-6 pb-3 xl:pt-4 rounded-full px-10">
                 <a class="" href="https://github.com/RogLag" target="_blank">
-                    <img src="/img/github.png" alt="github" class="w-6 h-6"/>
+                    <img src="{base}/img/github.png" alt="github" class="w-6 h-6"/>
                 </a>
                 <p class="border border-[#7EACC9] xl:w-0 xl:h-4 w-4 h-0"></p>
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a class="">
-                    <img src="/img/x.png" alt="x" class="w-5 h-5"/>
+                    <img src="{base}/img/x.png" alt="x" class="w-5 h-5"/>
                 </a>
                 <p class="border border-[#7EACC9] xl:w-0 xl:h-4 w-4 h-0"></p>
                 <!-- svelte-ignore a11y-missing-attribute -->
                 <a class="">
-                    <img src="/img/discord.png" alt="discord" class="w-7 h-5"/>
+                    <img src="{base}/img/discord.png" alt="discord" class="w-7 h-5"/>
                 </a>
             </div>
     </div>
