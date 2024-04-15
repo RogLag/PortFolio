@@ -24,7 +24,7 @@
             <div class="flex flex-col 940:flex-row items-center justify-center 940:justify-between 940:gap-0 gap-24 font-bold 940:px-32 w-full h-full">
                 <h1 class="h1 flex flex-col gap-4 items-center 940:items-start">
                     <span class="text-white">Hi, I'm</span>
-                    <Typing strings={['Hugo MERY.', 'A french student.', 'A full stack developper.', 'A python developper.']} loop=true typeSpeed={80} backSpeed={30} backDelay={2000} showCursor={false} smartBackspace={true} startDelay={0}>
+                    <Typing strings={['Hugo MERY.', 'A french student.', 'A full stack developer.', 'A python developer.']} loop=true typeSpeed={80} backSpeed={30} backDelay={2000} showCursor={false} smartBackspace={true} startDelay={0}>
                         <span class="min-h-12 bg-gradient-to-br from-blue-500 to-cyan-300 bg-clip-text text-transparent box-decoration-clone typing"></span>
                     </Typing>
                 </h1>
